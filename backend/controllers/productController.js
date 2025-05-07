@@ -19,3 +19,4 @@ const deleteProduct = async (req, res) => {
 }
 
 export { getProduct, postProduct, deleteProduct }
+// MONGO_URI = mongodb+srv://nenibal656:y66E7rzNLOncnPIK@cluster0.ug0zjbl.mongodb.net/

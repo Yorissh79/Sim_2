@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import style from './Basket.module.scss'
 import { useDispatch, useSelector } from 'react-redux'
-import Card from '../../components/backcard/components/card/Card'
 import { getBasketThunk } from '../../redux/reducers/basketSlice'
 import Backcard from '../../components/backcard/Backcard'
 
