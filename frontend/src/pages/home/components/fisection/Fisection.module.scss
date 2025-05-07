@@ -1,0 +1,48 @@
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+
+        h2 {
+            font-size: 3.5rem;
+            font-weight: 300;
+            color: #000;
+            line-height: 1.1;
+            font-family: "Playfair Display", serif;
+        }
+
+        p {
+            text-align: center;
+            width: 60%;
+            font-size: 1.25rem;
+            font-weight: 300;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            color: #b8b8b8;
+        }
+
+    }
+    
+    .imgbox {
+        padding-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 10px;
+        
+
+        img {
+
+        }
+
+    }
+}
