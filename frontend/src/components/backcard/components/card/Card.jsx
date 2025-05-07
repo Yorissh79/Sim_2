@@ -1,7 +1,8 @@
 import React from 'react'
 import style from './Card.module.scss'
 import { useDispatch } from 'react-redux'
-import { deleteCardThunk, getCardThunk } from '../../../../redux/reducers/cardSlice'
+import { deleteCardThunk } from '../../../../redux/reducers/cardSlice'
+import { deleteBasketThunk, postBasketThunk } from '../../../../redux/reducers/basketSlice'
 
 const Card = ({item, who}) => {
 
@@ -9,6 +10,14 @@ const Card = ({item, who}) => {
 
     const deleteItem = () => {
         dispatch(deleteCardThunk(item._id))
+    }
+
+    const deleteItemBas = () => {
+        dispatch(deleteBasketThunk(item._id))
+    }
+
+    const addBasket = () => {
+        dispatch(postBasketThunk(item))
     }
 
     return (
@@ -24,7 +33,8 @@ const Card = ({item, who}) => {
                 <p className={style.t}>{item.des}</p>
 
                 {who == "admin" ? <button onClick={() => deleteItem()}>Delete</button> : ""}
-                {who == "home" ? <button>Add to basket</button> : ""}
+                {who == "basket" ? <button onClick={() => deleteItemBas()}>Delete</button> : ""}
+                {who == "home" ? <button onClick={() => addBasket()}>Add to basket</button> : ""}
             </div>
 
 
